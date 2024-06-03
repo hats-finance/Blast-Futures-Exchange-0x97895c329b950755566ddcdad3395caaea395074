@@ -3,7 +3,7 @@ pragma solidity ^0.8.19;
 
 import "../lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol";
 
-contract DummyToken is ERC20 {
+contract DummyToken18 is ERC20 {
     address public immutable owner;
 
     uint test;
@@ -18,10 +18,6 @@ contract DummyToken is ERC20 {
     }
 
     function decimals() public view virtual override returns (uint8) {
-        return 6;
-    }
-
-    function doSomething() external {
-        test++;
+        return 18;
     }
 }
